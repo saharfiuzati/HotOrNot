@@ -10,7 +10,15 @@ namespace HotOrNot.WebUI.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var ctx = new HotOrNot.WebUI.Models.HotOrNotContext();
+            //ctx.Pictures.Add(new Models.Picture
+            //{
+            //    FileName = "test1.jpg",
+            //    CreateDate = DateTime.Now                
+            //});
+            //ctx.SaveChanges();
+
+            return View(ctx.Pictures);
         }
 
         public ActionResult About()
