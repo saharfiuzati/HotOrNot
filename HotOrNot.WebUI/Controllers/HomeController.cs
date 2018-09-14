@@ -1,38 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using HotOrNot.WebUI.Models;
 
 namespace HotOrNot.WebUI.Controllers
 {
     public class HomeController : Controller
     {
+        private HotOrNotContext db = new HotOrNotContext();
         public ActionResult Index()
         {
-            var ctx = new HotOrNot.WebUI.Models.HotOrNotContext();
-            //ctx.Pictures.Add(new Models.Picture
-            //{
-            //    FileName = "test1.jpg",
-            //    CreateDate = DateTime.Now                
-            //});
-            //ctx.SaveChanges();
-
-            return View(ctx.Pictures);
+            
+            return View(db.Pictures.ToList());
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+       
     }
 }
