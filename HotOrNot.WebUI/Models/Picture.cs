@@ -12,5 +12,7 @@ namespace HotOrNot.WebUI.Models
         public int PictureId { get; set; }
         public string FileName { get; set; }
         public DateTime CreateDate { get; set; }
+        public int LikeCnt { get; set; }
+        public int DisLikeCnt { get; set; }
     }
 }

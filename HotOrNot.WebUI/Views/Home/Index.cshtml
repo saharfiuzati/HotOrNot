@@ -1,17 +1,16 @@
-﻿@model IEnumerable<HotOrNot.WebUI.Models.Picture>
-@foreach (var item in Model)
-{
-    <div class="row">
-        <div class="col">
-            <div class="card" style="width: 100rem;">
-                <div class="card-body">
-                    <h1 class="card-text display-2">We can add title for pictures here</h1>
-                    <img src="@Url.Content(item.FileName)" class="card-image-top img-thumbnail" style="width:350px ;height:350px" />
-                    <p class="card-text lead">We can add some description for pictures here</p>
-                    <a href="#" class="btn btn-primary">Like</a>
-                    <a href="#" class="btn btn-danger">Dislike</a>
+﻿@model HotOrNot.WebUI.Models.Picture
+<div class="row mt-5 d-flex justify-content-center h-100 align-items-center">
+    <div class="col-sm-12 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <img src="@Url.Content(Model.FileName)" class="card-img-top" />
+                <h5 class="card-title">Image title should go here</h5>
+                <p class="card-text lead">We can add some description for pictures here</p>
+                <div class="d-flex justify-content-between">
+                    <a class="btn btn-primary" href="@Url.Action("CountLike","Home",new {PictureId=Model.PictureId })">Like</a>
+                    <a class="btn btn-danger" href="@Url.Action("CountDisLike","Home",new {PictureId=Model.PictureId })">Dislike</a>
                 </div>
             </div>
         </div>
     </div>
-}
+</div>
