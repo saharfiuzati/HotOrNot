@@ -7,9 +7,11 @@
                 <h5 class="card-title">Image title should go here</h5>
                 <p class="card-text lead">We can add some description for pictures here</p>
                 <div class="d-flex justify-content-between">
-                    <a class="btn btn-primary" href="@Url.Action("CountLike","Home",new {PictureId=Model.PictureId })">Like</a>
-                    <a class="btn btn-danger" href="@Url.Action("CountDisLike","Home",new {PictureId=Model.PictureId })">Dislike</a>
+                    <a class="btn btn-primary btn-lg" href="@Url.Action("IncLike","Home",new {PictureId=Model.PictureId })"><i class="far fa-thumbs-up 5x"></i></a>
+                    <a class="btn btn-danger btn-lg" href="@Url.Action("IncDisLike","Home",new {PictureId=Model.PictureId })"><i class="far fa-thumbs-down 5x"></i></a>
                 </div>
+                <p class="card-text mt-3 small"><i class="far fa-thumbs-up"></i> @Model.LikeCnt <i class="far fa-thumbs-down"></i> @Model.DisLikeCnt</p>
+                
             </div>
         </div>
     </div>

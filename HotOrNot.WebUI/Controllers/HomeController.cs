@@ -21,7 +21,7 @@ namespace HotOrNot.WebUI.Controllers
         }
         
 
-        public  ActionResult CountLike(int? PictureId)
+        public  ActionResult IncLike(int? PictureId)
         {
             var MyPicture = db.Pictures.Find(PictureId);
             MyPicture.LikeCnt++;
@@ -29,7 +29,7 @@ namespace HotOrNot.WebUI.Controllers
 
             return RedirectToAction("Index", "Home");
         }
-        public ActionResult CountDisLike(int? PictureId)
+        public ActionResult IncDisLike(int? PictureId)
         {
             var MyPicture = db.Pictures.Find(PictureId);
             MyPicture.DisLikeCnt++;
@@ -37,6 +37,7 @@ namespace HotOrNot.WebUI.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+       
 
     }
 }
