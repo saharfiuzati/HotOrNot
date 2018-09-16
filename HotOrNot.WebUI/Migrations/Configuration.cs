@@ -23,7 +23,8 @@ namespace HotOrNot.WebUI.Migrations
             context.Pictures.AddOrUpdate(x => x.PictureId,
         new Picture() { PictureId = 1, FileName = "http://www.gstatic.com/webp/gallery/1.jpg", CreateDate=System.DateTime.Now},
         new Picture() { PictureId = 2, FileName = "http://www.gstatic.com/webp/gallery/2.jpg", CreateDate= System.DateTime.Now },
-        new Picture() { PictureId = 3, FileName = "http://www.gstatic.com/webp/gallery/3.jpg", CreateDate= System.DateTime.Now });
+        new Picture() { PictureId = 3, FileName = "http://www.gstatic.com/webp/gallery/3.jpg", CreateDate= System.DateTime.Now },
+        new Picture() { PictureId = 4, FileName = "http://www.gstatic.com/webp/gallery/4.jpg", CreateDate = System.DateTime.Now });
         }
     }
 }

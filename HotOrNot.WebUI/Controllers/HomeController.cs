@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using HotOrNot.WebUI.Models;
 
+
 namespace HotOrNot.WebUI.Controllers
 {
     public class HomeController : Controller
@@ -15,10 +16,28 @@ namespace HotOrNot.WebUI.Controllers
         private HotOrNotContext db = new HotOrNotContext();
         public ActionResult Index()
         {
-            
-            return View(db.Pictures.ToList());
-        }
 
+            return View(db.Pictures.OrderBy(o=> Guid.NewGuid()).First());
+        }
+        
+
+        public  ActionResult IncLike(int? PictureId)
+        {
+            var MyPicture = db.Pictures.Find(PictureId);
+            MyPicture.LikeCnt++;
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
+        public ActionResult IncDisLike(int? PictureId)
+        {
+            var MyPicture = db.Pictures.Find(PictureId);
+            MyPicture.DisLikeCnt++;
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
        
+
     }
 }
