@@ -1,0 +1,23 @@
+﻿@model HotOrNot.WebUI.Models.Picture
+
+<p class="h4 mt-5">Upload Your Image Here</p>
+<div class="row">
+    <div class="col">
+        <form action="/Home/Create" method="POST">
+            <div class="form-group ">
+                <label for="MyFileName">Image Url:</label>
+                <input type="text" class="form-control" id="MyFileName" name="MyFileName" value="" placeholder="Enter Your Image's Path Here">
+            </div>
+            <div class="form-group">
+                <label for="MyFileName">Image Title:</label>
+                <input type="text" class="form-control" id="Mytitle" name="Mytitle" value="" placeholder="Enter Your Image's Title Here">
+            </div>
+            <div class="form-group">
+                <label for="MyFileName">Image Description:</label>
+                <input type="text" class="form-control" id="Mydescription" name="Mydescription" value="" placeholder="Enter Your Image's Description Here">
+            </div>
+
+            <button type="submit" class="btn btn-primary" value="Create">Submit</button>
+        </form>
+    </div>
+</div>

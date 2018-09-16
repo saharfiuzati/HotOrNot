@@ -179,6 +179,10 @@
     <Compile Include="Migrations\201809151231206_Modified-ColumnNameLike.Designer.cs">
       <DependentUpon>201809151231206_Modified-ColumnNameLike.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809161414461_Add-titledesc.cs" />
+    <Compile Include="Migrations\201809161414461_Add-titledesc.Designer.cs">
+      <DependentUpon>201809161414461_Add-titledesc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Picture.cs" />
     <Compile Include="Models\PictureContext.cs" />
@@ -222,6 +226,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809151231206_Modified-ColumnNameLike.resx">
       <DependentUpon>201809151231206_Modified-ColumnNameLike.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809161414461_Add-titledesc.resx">
+      <DependentUpon>201809161414461_Add-titledesc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
