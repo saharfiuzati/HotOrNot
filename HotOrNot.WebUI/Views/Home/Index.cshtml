@@ -1,15 +1,17 @@
-﻿@model HotOrNot.WebUI.Models.Picture
+﻿@model  HotOrNot.WebUI.Models.Picture
 
     <div class="row mt-5 d-flex justify-content-center h-100 align-items-center">
         <div class="col-sm-12 col-md-6">
             <div class="card">
                 <div class="card-body">
+                    
                     <img src="@Url.Content(Model.FilePath)" class="card-img-top" />
                     <h5 class="card-title">@Model.Title</h5>
                     <p class="card-text lead">@Model.Description</p>
                     <div class="d-flex justify-content-between">
-                        <a class="btn btn-primary btn-lg" href="@Url.Action("IncLike","Home",new {PictureId=Model.PictureId })"><i class="far fa-thumbs-up 5x"></i></a>
-                        <a class="btn btn-danger btn-lg" href="@Url.Action("IncDisLike","Home",new {PictureId=Model.PictureId })"><i class="far fa-thumbs-down 5x"></i></a>
+                        
+                        <a class="btn btn-primary btn-lg" href="@Url.Action("IncLike","Home",new {PictureId= Model.PictureId })"><i class="far fa-thumbs-up 5x"></i></a>
+                        <a class="btn btn-danger btn-lg" href="@Url.Action("IncDisLike","Home",new {PictureId=Model.PictureId})"><i class="far fa-thumbs-down 5x"></i></a>
                     </div>
                     <p class="card-text mt-3 small"><i class="far fa-thumbs-up"></i> @Model.LikeCnt <i class="far fa-thumbs-down"></i> @Model.DisLikeCnt</p>
 
