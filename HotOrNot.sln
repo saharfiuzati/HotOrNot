@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotOrNot.WebUI", "HotOrNot.WebUI\HotOrNot.WebUI.csproj", "{B90C3F14-C5C7-4DF8-B9A7-7466DC85DDCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotOrNot.WebUITests", "HotOrNot.WebUITests\HotOrNot.WebUITests.csproj", "{7EF203A6-2D97-4C1D-90AD-66D39318F494}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B90C3F14-C5C7-4DF8-B9A7-7466DC85DDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B90C3F14-C5C7-4DF8-B9A7-7466DC85DDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B90C3F14-C5C7-4DF8-B9A7-7466DC85DDCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EF203A6-2D97-4C1D-90AD-66D39318F494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF203A6-2D97-4C1D-90AD-66D39318F494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF203A6-2D97-4C1D-90AD-66D39318F494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF203A6-2D97-4C1D-90AD-66D39318F494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
